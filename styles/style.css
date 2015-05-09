@@ -12,7 +12,9 @@ h2{
 	width: 70%;
 	margin: 0 auto;
 }
-#button{
-	margin: 0 auto;
+body{
 	text-align: center;
+}
+button{
+	margin-bottom: 1em;
 }

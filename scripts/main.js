@@ -54,7 +54,12 @@ function initialize(){
                             mapTypeId: google.maps.MapTypeId.ROADMAP
                         }
                     );
-
+                    var myLatlng = new google.maps.LatLng(myLat,myLong);
+                    var marker = new google.maps.Marker({
+                        position: myLatlng,
+                        map: map,
+                         title: 'Hello World!'
+                    });
                 },
 
                 function( error ){

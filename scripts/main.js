@@ -21,21 +21,8 @@ function initialize(){
             }
         );
 
-
-        // -------------------------------------------------- //
-        // -------------------------------------------------- //
-        // -------------------------------------------------- //
-        // -------------------------------------------------- //
-
-
         // Check to see if this browser supports geolocation.
         if (navigator.geolocation) {
-
-            // This is the location marker that we will be using
-            // on the map. Let's store a reference to it here so
-            // that it can be updated in several places.
-            // var locationMarker = null;
-
 
             // Get the location of the user's browser using the
             // native geolocation service. When we invoke this method
@@ -48,20 +35,9 @@ function initialize(){
                     // Check to see if there is already a location.
                     // There is a bug in FireFox where this gets
                     // invoked more than once with a cahced result.
-                    if (marker){
-                        return;
-                    }
-                    //hi
-
                     // Log that this is the initial position.
                     console.log( "Initial Position Found" );
-
                     // Add a marker to the map using the position.
-                    locationMarker = addMarker(
-                        position.coords.latitude,
-                        position.coords.longitude,
-                        "Initial Position"
-                    );
                     console.log(position.coords.latitude);
                     console.log(position.coords.longitude);
                     myLat = position.coords.latitude;
@@ -79,47 +55,12 @@ function initialize(){
                         }
                     );
 
-        // I add a marker to the map using the given latitude
-        // and longitude location.
-        function addMarker( myLat, myLong, label ){
-            // Create the marker - this will automatically place it
-            // on the existing Google map (that we pass-in).
-            var marker = new google.maps.Marker({
-                map: map,
-                position: new google.maps.LatLng(
-                    myLat,
-                    myLong
-                ),
-                title: (label || "")
-            });
-
-            // Return the new marker reference.
-            return( marker );
-        }
-
-        // I update the marker's position and label.
-        function updateMarker( marker, myLat, myLong, label ){
-            // Update the position.
-            marker.setPosition(
-                new google.maps.LatLng(
-                    myLat,
-                    myLong
-                )
-            );
-
-            // Update the title if it was provided.
-            if (label){
-
-                marker.setTitle( label );
-
-            }
-        }
-
-
                 },
+
                 function( error ){
                     console.log( "Something went wrong: ", error );
                 },
+                
                 {
                     timeout: (5 * 1000),
                     maximumAge: (1000 * 60 * 15),

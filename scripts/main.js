@@ -82,7 +82,7 @@ function initialize(){
                     // Check to see if there is already a location.
                     // There is a bug in FireFox where this gets
                     // invoked more than once with a cahced result.
-                    if (locationMarker){
+                    if (marker){
                         return;
                     }
                     //hi

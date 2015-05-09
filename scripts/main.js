@@ -8,17 +8,17 @@ function initialize(){
     var myLong;
         var mapContainer = $("#map-canvas");
 
-        // map = new google.maps.Map(
-        //     mapContainer[ 0 ],
-        //     {
-        //         zoom: 11,
-        //         center: new google.maps.LatLng(
-        //             myLat,
-        //             myLong
-        //         ),
-        //         mapTypeId: google.maps.MapTypeId.ROADMAP
-        //     }
-        // );
+        map = new google.maps.Map(
+            mapContainer[ 0 ],
+            {
+                zoom: 11,
+                center: new google.maps.LatLng(
+                   30.2178882,
+                    -97.7963355
+                ),
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            }
+        );
 
 
         // I add a marker to the map using the given latitude

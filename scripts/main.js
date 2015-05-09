@@ -102,6 +102,17 @@ function initialize(){
                     console.log(position.coords.longitude);
                      myLat = position.coords.latitude;
                      myLong = position.coords.longitude;
+                             map = new google.maps.Map(
+                                mapContainer[ 0 ],
+                                {
+                                    zoom: 11,
+                                    center: new google.maps.LatLng(
+                                        myLat,
+                                        myLong
+                                    ),
+                                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                                }
+                            );
 
                 },
                 function( error ){

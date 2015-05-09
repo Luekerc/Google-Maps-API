@@ -20,42 +20,7 @@ function initialize(){
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             }
         );
-        // I add a marker to the map using the given latitude
-        // and longitude location.
-        function addMarker( myLat, myLong, label ){
-            // Create the marker - this will automatically place it
-            // on the existing Google map (that we pass-in).
-            var marker = new google.maps.Marker({
-                map: map,
-                position: new google.maps.LatLng(
-                    myLat,
-                    myLong
-                ),
-                title: (label || "")
-            });
 
-            // Return the new marker reference.
-            return( marker );
-        }
-
-
-        // I update the marker's position and label.
-        function updateMarker( marker, myLat, myLong, label ){
-            // Update the position.
-            marker.setPosition(
-                new google.maps.LatLng(
-                    myLat,
-                    myLong
-                )
-            );
-
-            // Update the title if it was provided.
-            if (label){
-
-                marker.setTitle( label );
-
-            }
-        }
 
         // -------------------------------------------------- //
         // -------------------------------------------------- //
@@ -114,7 +79,41 @@ function initialize(){
                         }
                     );
 
+        // I add a marker to the map using the given latitude
+        // and longitude location.
+        function addMarker( myLat, myLong, label ){
+            // Create the marker - this will automatically place it
+            // on the existing Google map (that we pass-in).
+            var marker = new google.maps.Marker({
+                map: map,
+                position: new google.maps.LatLng(
+                    myLat,
+                    myLong
+                ),
+                title: (label || "")
+            });
 
+            // Return the new marker reference.
+            return( marker );
+        }
+
+        // I update the marker's position and label.
+        function updateMarker( marker, myLat, myLong, label ){
+            // Update the position.
+            marker.setPosition(
+                new google.maps.LatLng(
+                    myLat,
+                    myLong
+                )
+            );
+
+            // Update the title if it was provided.
+            if (label){
+
+                marker.setTitle( label );
+
+            }
+        }
 
 
                 },

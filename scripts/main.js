@@ -5,6 +5,7 @@ console.log("Look for consoled coords");
 
 function initialize(){
     var myLat;
+    var marker;
     var myLong;
         var mapContainer = $("#map-canvas");
 

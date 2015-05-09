@@ -97,7 +97,8 @@ function initialize(){
                         position.coords.longitude,
                         "Initial Position"
                     );
-                    console.log(position);
+                     console.log(position.coords.latitude);
+                    console.log(position.coords.longitude);
 
                 },
                 function( error ){
@@ -135,7 +136,8 @@ function initialize(){
                         position.coords.longitude,
                         "Updated / Accurate Position"
                     );
-                    console.log(position);
+                    console.log(position.coords.latitude);
+                    console.log(position.coords.longitude);
                 }
             );
 

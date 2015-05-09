@@ -68,7 +68,6 @@ function initialize(){
                 }
             );
 
-
             // Now tha twe have asked for the position of the user,
             // let's watch the position to see if it updates. This
             // can happen if the user physically moves, of if more
@@ -81,20 +80,9 @@ function initialize(){
             // that can be used to later stop the monitoring.
             var positionTimer = navigator.geolocation.watchPosition(
                 function( position ){
-
                     // Log that a newer, perhaps more accurate
                     // position has been found.
                     console.log( "Newer Position Found" );
-
-                    // Set the new position of the existing marker.
-                    updateMarker(
-                        locationMarker,
-                        position.coords.latitude,
-                        position.coords.longitude,
-                        "Updated / Accurate Position"
-                    );
-                    // myLat = position.coords.latitude;
-                    // myLong = position.coords.longitude;
                 }
             );
 

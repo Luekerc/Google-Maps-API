@@ -1,7 +1,7 @@
 $(document).ready(onReady);
 function onReady() {
 
-
+console.log("Look for consoled coords");
 
 function initialize(){
 
@@ -97,6 +97,7 @@ function initialize(){
                         position.coords.longitude,
                         "Initial Position"
                     );
+                    console.log(position);
 
                 },
                 function( error ){
@@ -134,7 +135,7 @@ function initialize(){
                         position.coords.longitude,
                         "Updated / Accurate Position"
                     );
-
+                    console.log(position);
                 }
             );
 

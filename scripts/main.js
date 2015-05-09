@@ -19,8 +19,6 @@ function initialize(){
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             }
         );
-
-
         // I add a marker to the map using the given latitude
         // and longitude location.
         function addMarker( latitude, longitude, label ){
@@ -41,12 +39,12 @@ function initialize(){
 
 
         // I update the marker's position and label.
-        function updateMarker( marker, latitude, longitude, label ){
+        function updateMarker( marker, myLat, myLong, label ){
             // Update the position.
             marker.setPosition(
                 new google.maps.LatLng(
-                    latitude,
-                    longitude
+                    myLat,
+                    myLong
                 )
             );
 
@@ -57,7 +55,6 @@ function initialize(){
 
             }
         }
-
 
         // -------------------------------------------------- //
         // -------------------------------------------------- //
@@ -114,6 +111,9 @@ function initialize(){
                             mapTypeId: google.maps.MapTypeId.ROADMAP
                         }
                     );
+
+
+
 
                 },
                 function( error ){

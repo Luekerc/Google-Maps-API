@@ -21,7 +21,7 @@ function initialize(){
         );
         // I add a marker to the map using the given latitude
         // and longitude location.
-        function addMarker( latitude, longitude, label ){
+        function addMarker( myLat, myLong, label ){
             // Create the marker - this will automatically place it
             // on the existing Google map (that we pass-in).
             var marker = new google.maps.Marker({

@@ -105,7 +105,7 @@ function initialize(){
                              map = new google.maps.Map(
                                 mapContainer[ 0 ],
                                 {
-                                    zoom: 8,
+                                    zoom: 4,
                                     center: new google.maps.LatLng(
                                         myLat,
                                         myLong

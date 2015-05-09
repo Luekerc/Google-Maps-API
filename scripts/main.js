@@ -29,8 +29,8 @@ function initialize(){
             var marker = new google.maps.Marker({
                 map: map,
                 position: new google.maps.LatLng(
-                    latitude,
-                    longitude
+                    myLat,
+                    myLong
                 ),
                 title: (label || "")
             });
@@ -71,7 +71,7 @@ function initialize(){
             // This is the location marker that we will be using
             // on the map. Let's store a reference to it here so
             // that it can be updated in several places.
-            var locationMarker = null;
+            // var locationMarker = null;
 
 
             // Get the location of the user's browser using the
@@ -98,21 +98,22 @@ function initialize(){
                         position.coords.longitude,
                         "Initial Position"
                     );
-                     console.log(position.coords.latitude);
+                    console.log(position.coords.latitude);
                     console.log(position.coords.longitude);
-                     myLat = position.coords.latitude;
-                     myLong = position.coords.longitude;
-                             map = new google.maps.Map(
-                                mapContainer[ 0 ],
-                                {
-                                    zoom: 14,
-                                    center: new google.maps.LatLng(
-                                        myLat,
-                                        myLong
-                                    ),
-                                    mapTypeId: google.maps.MapTypeId.ROADMAP
-                                }
-                            );
+                    myLat = position.coords.latitude;
+                    myLong = position.coords.longitude;
+
+                    map = new google.maps.Map(
+                        mapContainer[ 0 ],
+                        {
+                            zoom: 14,
+                            center: new google.maps.LatLng(
+                                myLat,
+                                myLong
+                            ),
+                            mapTypeId: google.maps.MapTypeId.ROADMAP
+                        }
+                    );
 
                 },
                 function( error ){

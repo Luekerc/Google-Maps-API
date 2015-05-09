@@ -1,13 +1,13 @@
 h2{
 	font-size: 2em;
 	font-weight: bold;
-	margin: 2em 0 0 2em;
+	margin: 0 auto;
 }
 #map-canvas{
 	height: 20em;
 	width: 70%;
-	margin: 2em 0 0 5em;
+	margin: 0 auto;
 }
 button{
-	margin: 2em 0 0 5em;
+	margin: 0 auto;
 }

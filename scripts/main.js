@@ -100,6 +100,8 @@ function initialize(){
                     );
                      console.log(position.coords.latitude);
                     console.log(position.coords.longitude);
+                     myLat = position.coords.latitude;
+                     myLong = position.coords.longitude;
 
                 },
                 function( error ){
@@ -137,8 +139,8 @@ function initialize(){
                         position.coords.longitude,
                         "Updated / Accurate Position"
                     );
-                    myLat = position.coords.latitude;
-                    myLong = position.coords.longitude;
+                    // myLat = position.coords.latitude;
+                    // myLong = position.coords.longitude;
                 }
             );
 

@@ -98,8 +98,8 @@ function initialize(){
                         position.coords.longitude,
                         "Initial Position"
                     );
-                     console.log(Geoposition.coords.latitude);
-                    console.log(Geoposition.coords.longitude);
+                     console.log(position.coords.latitude);
+                    console.log(position.coords.longitude);
 
                 },
                 function( error ){

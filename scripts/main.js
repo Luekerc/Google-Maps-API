@@ -85,6 +85,7 @@ function initialize(){
                     if (locationMarker){
                         return;
                     }
+                    //hi
 
                     // Log that this is the initial position.
                     console.log( "Initial Position Found" );

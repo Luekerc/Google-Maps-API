@@ -4,7 +4,8 @@ function onReady() {
 console.log("Look for consoled coords");
 
 function initialize(){
-
+    var myLat;
+    var myLong;
         var mapContainer = $("#map-canvas");
 
         map = new google.maps.Map(
@@ -12,8 +13,8 @@ function initialize(){
             {
                 zoom: 11,
                 center: new google.maps.LatLng(
-                    40.700683,
-                    -73.925972
+                    myLat,
+                    myLong
                 ),
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             }
@@ -136,8 +137,8 @@ function initialize(){
                         position.coords.longitude,
                         "Updated / Accurate Position"
                     );
-                    console.log(position.coords.latitude);
-                    console.log(position.coords.longitude);
+                    myLat = position.coords.latitude;
+                    myLong = position.coords.longitude;
                 }
             );
 

@@ -93,21 +93,7 @@ function initialize(){
                     console.log( "Newer Position Found" );
                 }
             );
-
-
-            // If the position hasn't updated within 5 minutes, stop
-            // monitoring the position for changes.
-            setTimeout(
-                function(){
-                    // Clear the position watcher.
-                    navigator.geolocation.clearWatch( positionTimer );
-                },
-                (1000 * 60 * 5)
-            );
-
-        }
-
-//my attempt to do the search service
+                    //my attempt to do the search service
                     var request = {
                         location: myLatlng,
                         radius: '500',
@@ -126,6 +112,19 @@ function initialize(){
                             }
                         }
                     }//end of the search code, gotta place with the scope
+
+            // If the position hasn't updated within 5 minutes, stop
+            // monitoring the position for changes.
+            setTimeout(
+                function(){
+                    // Clear the position watcher.
+                    navigator.geolocation.clearWatch( positionTimer );
+                },
+                (1000 * 60 * 5)
+            );
+
+        }
+
 }
 
 $("#button").click(function(){

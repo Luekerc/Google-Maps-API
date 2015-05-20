@@ -112,7 +112,7 @@ function initialize(){
         }
 }
 
-https://developers.google.com/maps/documentation/javascript/examples/place-search
+//developers.google.com/maps/documentation/javascript/examples/place-search
 function searchMap() {
   var pyrmont = new google.maps.LatLng(30.252743499999998, -97.76361469999999);
 
@@ -123,8 +123,8 @@ function searchMap() {
 
   var request = {
     location: pyrmont,
-    radius: 500,
-    types: ['store']
+    radius: 1000,
+    types: ['doctor']
   };
   infowindow = new google.maps.InfoWindow();
   var service = new google.maps.places.PlacesService(map);

@@ -75,6 +75,15 @@ function initialize(){
                     service.nearbySearch(request, callback);
                     //this closes this section of the search service
                 },
+                        //this is the rest of the search code
+                    function callback(results, status) {
+                        if (status == google.maps.places.PlacesServiceStatus.OK) {
+                            for (var i = 0; i < results.length; i++) {
+                            var place = results[i];
+                            createMarker(results[i]);
+                            }
+                        }
+                    }//end of the search code, gotta place with the scope
 
                 function( error ){
                     console.log( "Something went wrong: ", error );
@@ -117,15 +126,7 @@ function initialize(){
             );
 
         }
-        //this is the rest of the search code
-        function callback(results, status) {
-            if (status == google.maps.places.PlacesServiceStatus.OK) {
-                for (var i = 0; i < results.length; i++) {
-                    var place = results[i];
-                     createMarker(results[i]);
-                }
-            }
-        }//end of the search code, gotta place with the scope
+
 }
 
 $("#button").click(function(){

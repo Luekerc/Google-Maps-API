@@ -64,6 +64,17 @@ function initialize(){
                         map: map,
                         title: 'You are here'
                     });
+
+                    //my attempt to do the search service
+                    var request = {
+                        location: myLatlng,
+                        radius: '500',
+                        types: ['restaurant']
+                      };
+
+                    service = new google.maps.places.PlacesService(map);
+                    service.nearbySearch(request, callback);
+                    //this closes this section of the search service
                 },
 
                 function( error ){
@@ -94,17 +105,8 @@ function initialize(){
                     console.log( "Newer Position Found" );
                 }
             );
-                    //my attempt to do the search service
-                    var request = {
-                        location: myLatlng,
-                        radius: '500',
-                        types: ['restaurant']
-                      };
 
-                    service = new google.maps.places.PlacesService(map);
-                    service.nearbySearch(request, callback);
-                    //this closes this section of the search service
-                                 //this is the rest of the search code
+                //this is the rest of the search code
                     function callback(results, status) {
                         if (status == google.maps.places.PlacesServiceStatus.OK) {
                             for (var i = 0; i < results.length; i++) {

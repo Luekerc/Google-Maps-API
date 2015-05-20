@@ -7,7 +7,9 @@ function initialize(){
     var myLat;
     var marker;
     var myLong;
-        var mapContainer = $("#map-canvas");
+    var map;
+    var infowindow;
+    var mapContainer = $("#map-canvas");
 
         map = new google.maps.Map(
             mapContainer[ 0 ],
@@ -54,12 +56,22 @@ function initialize(){
                             mapTypeId: google.maps.MapTypeId.ROADMAP
                         }
                     );
+
                     var myLatlng = new google.maps.LatLng(myLat,myLong);
                     var marker = new google.maps.Marker({
                         position: myLatlng,
                         map: map,
-                         title: 'I see you!'
+                         title: 'You are here'
                     });
+                    //my attempt to do the search service
+                    var request = {
+                        location: pyrmont,
+                        radius: '500',
+                        types: ['store']
+                      };
+
+                    service = new google.maps.places.PlacesService(map);
+                    service.nearbySearch(request, callback);
                 },
 
                 function( error ){
@@ -103,7 +115,14 @@ function initialize(){
             );
 
         }
-
+        function callback(results, status) {
+            if (status == google.maps.places.PlacesServiceStatus.OK) {
+                for (var i = 0; i < results.length; i++) {
+                    var place = results[i];
+                     createMarker(results[i]);
+                }
+            }
+       }
 }
 
 $("#button").click(function(){

@@ -124,7 +124,7 @@ function searchMap() {
   var request = {
     location: pyrmont,
     radius: 1000,
-    types: ['clinic']
+    types: ['hospital', 'doctor']
   };
   infowindow = new google.maps.InfoWindow();
   var service = new google.maps.places.PlacesService(map);

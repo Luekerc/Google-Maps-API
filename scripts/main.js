@@ -8,6 +8,7 @@ function initialize(){
     var marker;
     var myLong;
     var map;
+    var service;
     var infowindow;
     var mapContainer = $("#map-canvas");
 
@@ -67,7 +68,7 @@ function initialize(){
                     var request = {
                         location: myLatlng,
                         radius: '500',
-                        types: ['store']
+                        types: ['clinic']
                       };
 
                     service = new google.maps.places.PlacesService(map);

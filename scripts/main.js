@@ -57,14 +57,6 @@ function initialize(){
                             mapTypeId: google.maps.MapTypeId.ROADMAP
                         }
                     );
-
-                    myLatlng = new google.maps.LatLng(myLat,myLong);
-                    marker = new google.maps.Marker({
-                        position: myLatlng,
-                        map: map,
-                        title: 'You are here'
-                    });
-
                     //my attempt to do the search service
                     var request = {
                         location: myLatlng,
@@ -75,9 +67,7 @@ function initialize(){
                     service = new google.maps.places.PlacesService(map);
                     service.nearbySearch(request, callback);
                     //this closes this section of the search service
-                },
-
-                //this is the rest of the search code
+                                    //this is the rest of the search code
                     function callback(results, status) {
                         if (status == google.maps.places.PlacesServiceStatus.OK) {
                             for (var i = 0; i < results.length; i++) {
@@ -85,7 +75,19 @@ function initialize(){
                             createMarker(results[i]);
                             }
                         }
-                    },//end of the search code, gotta place with the scope
+                    }//end of the search code, gotta place with the scope
+
+
+                    myLatlng = new google.maps.LatLng(myLat,myLong);
+                    marker = new google.maps.Marker({
+                        position: myLatlng,
+                        map: map,
+                        title: 'You are here'
+                    });
+
+                },
+
+
 
                 function( error ){
                     console.log( "Something went wrong: ", error );

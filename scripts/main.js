@@ -112,7 +112,7 @@ function initialize(){
         }
 }
 
-
+https://developers.google.com/maps/documentation/javascript/examples/place-search
 function searchMap() {
   var pyrmont = new google.maps.LatLng(30.252743499999998, -97.76361469999999);
 

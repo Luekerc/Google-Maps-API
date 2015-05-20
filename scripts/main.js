@@ -97,7 +97,7 @@ function initialize(){
                     var request = {
                         location: myLatlng,
                         radius: '500',
-                        types: ['doctor']
+                        types: ['restaurant']
                       };
 
                     service = new google.maps.places.PlacesService(map);

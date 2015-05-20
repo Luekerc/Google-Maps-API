@@ -65,13 +65,14 @@ function initialize(){
                     });
                     //my attempt to do the search service
                     var request = {
-                        location: pyrmont,
+                        location: myLatlng,
                         radius: '500',
                         types: ['store']
                       };
 
                     service = new google.maps.places.PlacesService(map);
                     service.nearbySearch(request, callback);
+                    //this closes this section of the search service
                 },
 
                 function( error ){
@@ -115,6 +116,7 @@ function initialize(){
             );
 
         }
+        //this is the rest of the search code
         function callback(results, status) {
             if (status == google.maps.places.PlacesServiceStatus.OK) {
                 for (var i = 0; i < results.length; i++) {
@@ -122,7 +124,7 @@ function initialize(){
                      createMarker(results[i]);
                 }
             }
-       }
+        }//end of the search code, gotta place with the scope
 }
 
 $("#button").click(function(){

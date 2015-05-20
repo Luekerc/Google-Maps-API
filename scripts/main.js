@@ -8,6 +8,7 @@ function initialize(){
     var marker;
     var myLong;
     var map;
+    var myLatlng;
     var service;
     var infowindow;
     var mapContainer = $("#map-canvas");

@@ -83,7 +83,7 @@ function initialize(){
                             createMarker(results[i]);
                             }
                         }
-                    }//end of the search code, gotta place with the scope
+                    },//end of the search code, gotta place with the scope
 
                 function( error ){
                     console.log( "Something went wrong: ", error );

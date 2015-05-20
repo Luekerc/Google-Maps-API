@@ -34,7 +34,6 @@ function initialize(){
             // argument - our configuration options - are optional.
             navigator.geolocation.getCurrentPosition(
                 function( position ){
-
                     // Check to see if there is already a location.
                     // There is a bug in FireFox where this gets
                     // invoked more than once with a cahced result.
@@ -58,11 +57,11 @@ function initialize(){
                         }
                     );
 
-                    var myLatlng = new google.maps.LatLng(myLat,myLong);
-                    var marker = new google.maps.Marker({
+                    myLatlng = new google.maps.LatLng(myLat,myLong);
+                    marker = new google.maps.Marker({
                         position: myLatlng,
                         map: map,
-                         title: 'You are here'
+                        title: 'You are here'
                     });
                     //my attempt to do the search service
                     var request = {
@@ -74,8 +73,7 @@ function initialize(){
                     service = new google.maps.places.PlacesService(map);
                     service.nearbySearch(request, callback);
                     //this closes this section of the search service
-                },
-                        //this is the rest of the search code
+                                 //this is the rest of the search code
                     function callback(results, status) {
                         if (status == google.maps.places.PlacesServiceStatus.OK) {
                             for (var i = 0; i < results.length; i++) {
@@ -84,6 +82,7 @@ function initialize(){
                             }
                         }
                     },//end of the search code, gotta place with the scope
+                },
 
                 function( error ){
                     console.log( "Something went wrong: ", error );

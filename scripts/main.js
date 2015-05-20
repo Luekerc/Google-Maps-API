@@ -125,7 +125,7 @@ function initialize(){
                             createMarker(results[i]);
                             }
                         }
-                    },//end of the search code, gotta place with the scope
+                    }//end of the search code, gotta place with the scope
 }
 
 $("#button").click(function(){

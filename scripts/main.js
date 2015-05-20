@@ -77,6 +77,16 @@ function initialize(){
                     //this closes this section of the search service
                 },
 
+                //this is the rest of the search code
+                    function callback(results, status) {
+                        if (status == google.maps.places.PlacesServiceStatus.OK) {
+                            for (var i = 0; i < results.length; i++) {
+                            var place = results[i];
+                            createMarker(results[i]);
+                            }
+                        }
+                    },//end of the search code, gotta place with the scope
+
                 function( error ){
                     console.log( "Something went wrong: ", error );
                 },
@@ -105,16 +115,6 @@ function initialize(){
                     console.log( "Newer Position Found" );
                 }
             );
-
-                //this is the rest of the search code
-                    function callback(results, status) {
-                        if (status == google.maps.places.PlacesServiceStatus.OK) {
-                            for (var i = 0; i < results.length; i++) {
-                            var place = results[i];
-                            createMarker(results[i]);
-                            }
-                        }
-                    }//end of the search code, gotta place with the scope
 
             // If the position hasn't updated within 5 minutes, stop
             // monitoring the position for changes.

@@ -66,7 +66,7 @@ function initialize(){
                     });
                     //start search
                     map = new google.maps.Map(document.getElementById('map-canvas'), {
-                        center: pyrmont,
+                        center: myLatlng,
                         zoom: 14
                     });
 

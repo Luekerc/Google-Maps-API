@@ -184,7 +184,7 @@ function initialize(){
 //   google.maps.event.addListener(marker, 'click', function() {
 //     infowindow.setContent(place.name);
 //     infowindow.open(map, this);
-//   });
+//   });;
 // }
 
 $("#button").click(function(){
@@ -192,4 +192,4 @@ $("#button").click(function(){
     // searchMap();
 })
 
-}
+};

@@ -128,7 +128,6 @@ function onReady(){
                           createMarker(results[i]);
                         }
                       }
-                    }
 
                     function createMarker(place) {
                       var placeLoc = place.geometry.location;
@@ -143,6 +142,10 @@ function onReady(){
                       });
                     }//end of createMarker()
 
+
+
+
+                    }
         }//end of if(navigator.geolocation) 
     }//end of function initialize()
 

@@ -26,7 +26,7 @@ function initialize(){
         );
 
         // Check to see if this browser supports geolocation.
-        if (navigator.geolocation) {
+        if (navigator.geolocation) {//if (navigator.geolocation) 
 
             // Get the location of the user's browser using the
             // native geolocation service. When we invoke this method
@@ -144,8 +144,7 @@ function initialize(){
                         infowindow.open(map, this);
                       });//end of search function
 
-        }
-
+            }//end of if(navigator.geolocation) 
 }
 
 //developers.google.com/maps/documentation/javascript/examples/place-search

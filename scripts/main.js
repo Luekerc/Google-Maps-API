@@ -71,7 +71,7 @@ function initialize(){
                     });
 
                     var request = {
-                      location: pyrmont,
+                      location: myLatlng,
                       radius: 1000,
                       types: ['pharmacy']
                     };

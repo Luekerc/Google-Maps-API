@@ -185,9 +185,9 @@ function initialize(){
 //   });
 // }
 
-// $("#button").click(function(){
-//     initialize();
-//     searchMap();
-// })
+$("#button").click(function(){
+    initialize();
+    // searchMap();
+})
 
-// }
+}

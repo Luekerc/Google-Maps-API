@@ -1,17 +1,17 @@
 $(document).ready(onReady);
-function onReady() {
+function onReady(){
 
-console.log("Look for consoled coords");
+    console.log("Look for consoled coords");
 
-function initialize(){
-    var myLat;
-    var marker;
-    var myLong;
-    var map;
-    var myLatlng;
-    var service;
-    var infowindow;
-    var mapContainer = $("#map-canvas");
+    function initialize(){
+        var myLat;
+        var marker;
+        var myLong;
+        var map;
+        var myLatlng;
+        var service;
+        var infowindow;
+        var mapContainer = $("#map-canvas");
 
         map = new google.maps.Map(
             mapContainer[ 0 ],
@@ -144,8 +144,8 @@ function initialize(){
                         infowindow.open(map, this);
                       });//end of search function
 
-            }//end of if(navigator.geolocation) 
-}
+        }//end of if(navigator.geolocation) 
+    }//end of function initialize()
 
 //developers.google.com/maps/documentation/javascript/examples/place-search
 // function searchMap() {
@@ -190,6 +190,6 @@ function initialize(){
 $("#button").click(function(){
     initialize();
     // searchMap();
-})
+});
 
-};
+}

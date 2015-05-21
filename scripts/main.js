@@ -1,8 +1,6 @@
 $(document).ready(onReady);
 function onReady(){
 
-    console.log("Look for consoled coords");
-
     function initialize(){
         var myLat;
         var marker;
@@ -142,10 +140,20 @@ function onReady(){
                       google.maps.event.addListener(marker, 'click', function() {
                         infowindow.setContent(place.name);
                         infowindow.open(map, this);
-                      });//end of search function
+                      });
+                    }//end of createMarker()
 
         }//end of if(navigator.geolocation) 
     }//end of function initialize()
+
+
+
+    $("#button").click(function(){
+        initialize();
+        // searchMap();
+    })
+
+}
 
 //developers.google.com/maps/documentation/javascript/examples/place-search
 // function searchMap() {
@@ -186,10 +194,3 @@ function onReady(){
 //     infowindow.open(map, this);
 //   });;
 // }
-
-$("#button").click(function(){
-    initialize();
-    // searchMap();
-});
-
-}

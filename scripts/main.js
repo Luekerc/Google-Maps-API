@@ -63,22 +63,19 @@ function onReady(){
                         title: 'You are here'
                     });
                     //start search
-                    map = new google.maps.Map(document.getElementById('map-canvas'), {
-                        center: myLatlng,
-                        zoom: 14
-                    });
+                    // map = new google.maps.Map(document.getElementById('map-canvas'), {
+                    //     center: myLatlng,
+                    //     zoom: 14
+                    // });
 
-                    var request = {
-                      location: myLatlng,
-                      radius: 1000,
-                      types: ['pharmacy']
-                    };
-                    infowindow = new google.maps.InfoWindow();
-                    var service = new google.maps.places.PlacesService(map);
-                      service.nearbySearch(request, callback);
-                    },//added comma
-
-
+                    // var request = {
+                    //   location: myLatlng,
+                    //   radius: 1000,
+                    //   types: ['pharmacy']
+                    // };
+                    // infowindow = new google.maps.InfoWindow();
+                    // var service = new google.maps.places.PlacesService(map);
+                    //   service.nearbySearch(request, callback);
                     // },
 
 

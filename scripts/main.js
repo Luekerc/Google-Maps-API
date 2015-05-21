@@ -78,7 +78,7 @@ function initialize(){
                     infowindow = new google.maps.InfoWindow();
                     var service = new google.maps.places.PlacesService(map);
                       service.nearbySearch(request, callback);
-                    }
+                    },//added comma
 
                     function callback(results, status) {
                       if (status == google.maps.places.PlacesServiceStatus.OK) {
@@ -86,7 +86,7 @@ function initialize(){
                           createMarker(results[i]);
                         }
                       }
-                    }
+                    },//added comma
 
                     function createMarker(place) {
                       var placeLoc = place.geometry.location;
